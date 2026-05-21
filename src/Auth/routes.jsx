@@ -1,13 +1,22 @@
+import Login from "./login";
+import OtpVerify from "./OtpVerify";
 
-import { Routes, Route } from "react-router-dom";
-import Terms from "./terms"
-import Login from './login'
-const   AppRoutes = () => {
-  return (
-    <Routes>
-        <Route path="/" element={<Login />} />
-      <Route path="/terms" element={<Terms />} />
-    </Routes>
-  );
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />
+    },
+    {
+     path: "/otp-verify",
+  element: <OtpVerify />
+    }
+  ]);
+const Routes = () => {
+  return <RouterProvider router={router} />
 }
-export default AppRoutes;
+
+export default Routes;
