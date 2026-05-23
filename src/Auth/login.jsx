@@ -58,7 +58,7 @@ const Login = () => {
             <p className='description'>
                 Enter your phone number to get <br /> started with fresh delivery and great offers
             </p>
-            <h3>Phone Number</h3>
+            <h4>Phone Number</h4>
 
             <div className="phone-container">
                 <img className="flag" src={flagnepal} alt="Nepal Flag" />
