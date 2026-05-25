@@ -12,20 +12,20 @@ const placeholders = [
   'Search for Chicken...',
   'Search for Tomatoes...',
   'Search for Noodles...',
-]; 
+];
 
 const Nav_bar = () => {
   const [query, setQuery] = useState('');
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [fade, setFade] = useState(true);
+  const [focused, setFocused] = useState(false);
 
-  // Auto-rotate placeholder every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // fade out
+      setFade(false);
       setTimeout(() => {
         setPlaceholderIndex(i => (i + 1) % placeholders.length);
-        setFade(true); // fade in
+        setFade(true);
       }, 300);
     }, 5000);
     return () => clearInterval(interval);
@@ -35,17 +35,23 @@ const Nav_bar = () => {
     <nav className="navbar">
       <div className="nav-inner">
 
+        {/* Brand */}
         <Link to="/Home" className="nav-brand">
           <img src="https://onestopmart.sgp1.cdn.digitaloceanspaces.com/adaptive-icon.png" alt="OneStopMart logo" />
           <span>OneStopMart</span>
         </Link>
 
-        <div className="nav-location">
-          <FaMapMarkerAlt />
-          <span>Kathmandu, Nepal</span>
+        {/* Nav Links */}
+        <div className="navitems">
+          <Link to="/bakery">Bakery</Link>
+          <Link to="/deals">Deals</Link>
+          <Link to="/local-farms">Local Farms</Link>
+          <Link to="/organic">Organic</Link>
+          <Link to="/groceries">Groceries</Link>
         </div>
 
-        <div className="nav-search">
+        {/* Search */}
+        <div className={`nav-search ${focused ? 'nav-search-expanded' : ''}`}>
           <FaSearch className="search-icon" />
           <input
             type="text"
@@ -53,9 +59,18 @@ const Nav_bar = () => {
             onChange={(e) => setQuery(e.target.value)}
             placeholder={placeholders[placeholderIndex]}
             className={fade ? 'placeholder-fade-in' : 'placeholder-fade-out'}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
           />
         </div>
 
+        {/* Location */}
+        <div className="nav-location">
+          <FaMapMarkerAlt />
+          <span>Kathmandu, Nepal</span>
+        </div>
+
+        {/* Icons */}
         <div className="nav-icons">
           <Link to="/cart" className="nav-icon-btn cart">
             <FaShoppingCart />
@@ -70,7 +85,7 @@ const Nav_bar = () => {
 
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav_bar
+export default Nav_bar;

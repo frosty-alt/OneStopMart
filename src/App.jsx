@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import Routes from './Auth/routes'
+import Routes from './Auth/Auth.routes'
 
 
 const App = () => {
