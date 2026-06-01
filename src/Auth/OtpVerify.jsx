@@ -73,7 +73,7 @@ const OtpVerify = () => {
       );
       const data = await response.json();
       if (response.ok) {
-        navigate('/home');
+        navigate('/userlogin');
       } else {
         setError(data.message || 'Invalid OTP. Try again.');
       }

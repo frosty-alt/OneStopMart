@@ -1,6 +1,7 @@
 import Login from "./login";
 import OtpVerify from "./OtpVerify";
 import Home from "../Home/Home";
+import Userlogin from "./userlogin";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
@@ -11,15 +12,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
       element: <Home />
     },
     {
-      path: "/",
+      path: "/login",
       element: <Login />
     },
     {
      path: "/otp-verify",
   element: <OtpVerify />
 
+    },
+    {
+      path: "/userlogin",
+      element: <Userlogin />
     }
-    
   ]);
 const Routes = () => {
   return <RouterProvider router={router} />

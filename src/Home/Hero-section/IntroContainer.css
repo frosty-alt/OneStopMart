@@ -1,0 +1,30 @@
+.greeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin : 0;
+}
+
+.OSMStars {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    width: 99%;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content p,
+.text-content h2 {
+    margin: 0;
+}
+
+.loyalty-badge {
+    width: 4%;
+    height: auto;
+}
