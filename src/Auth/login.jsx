@@ -19,7 +19,7 @@ const Login = () => {
         try {
             setLoading(true)
             setError('')
-            const token = localStorage.getItemem('token')
+            const token = localStorage.getItem('token')
             const response = await fetch('https://onestopmartbackend-eqe8hea0azegacdq.southeastasia-01.azurewebsites.net/auth/send-otp', {
                 method: 'POST',
                 headers: {

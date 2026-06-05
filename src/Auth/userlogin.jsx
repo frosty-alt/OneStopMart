@@ -8,7 +8,7 @@ const userlogin = () => {
     const [name, setName] = useState('')
     
 
-    const Handlesubmit = async () => {
+    const HandleSubmit = async () => {
         if (!name.trim()) {
       setError('Please enter your name.');
       return;
@@ -33,6 +33,7 @@ const userlogin = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
       },
       body: JSON.stringify({ name }),
     }
@@ -42,7 +43,10 @@ const userlogin = () => {
     throw new Error('Failed to set user name');
   }
 
-  navigate('/home');
+  const data = await response.json();
+  console.log('Name set successfully:', data);
+  navigate('/home', { state: { name: data.user.name } });
+
 } catch (error) {
   console.error('Error Occurred:', error);
 }
@@ -56,7 +60,9 @@ finally{
         <h3>User Login</h3>
         <p>This is the user login page.</p>
         <input type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
-        <button onClick={Handlesubmit }>Submit</button>
+        <button disabled={loading} onClick={HandleSubmit}>
+          {loading ? 'Submitting...' : 'Submit'}
+        </button>
     </div>
   )
 }
