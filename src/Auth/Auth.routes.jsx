@@ -12,7 +12,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
       element: <Home />
     },
     {
-      path: "/login",
+      path: "/",
       element: <Login />
     },
     {

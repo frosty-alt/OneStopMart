@@ -5,7 +5,7 @@ const IntroContainer = (props) => {
   return (
     <div className="IntroContainer">
         <div className="greeting">
-        <h3>Welcome Back, Anuj </h3>
+        <h3>Welcome Back, {props.name} </h3>
         <p>Your fresh harvest from Pokhara Valley is ready for tracking.</p>
         </div>
         <div className="OSMStars"> 

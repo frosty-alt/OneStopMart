@@ -23,8 +23,8 @@ const userlogin = () => {
    try {
     const token = localStorage.getItem('token');
     console.log('All localStorage:', {...localStorage});
-        console.log('All sessionStorage:', {...sessionStorage});
-    if (!token) {
+    console.log('All sessionStorage:', {...sessionStorage});
+       if (!token) {
       throw new Error('User is not authenticated');
     }
   const response = await fetch(
@@ -33,6 +33,7 @@ const userlogin = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify({ name }),
     }

@@ -19,15 +19,18 @@ const Login = () => {
         try {
             setLoading(true)
             setError('')
-
+            const token = localStorage.getItemem('token')
             const response = await fetch('https://onestopmartbackend-eqe8hea0azegacdq.southeastasia-01.azurewebsites.net/auth/send-otp', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     phone: `+977${phone}`
+                   
                 })
+                
             })
 
             const data = await response.json()
