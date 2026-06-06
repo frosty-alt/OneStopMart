@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
+import LocationPicker from '../component/map';
 const userlogin = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
@@ -63,6 +64,9 @@ finally{
         <button disabled={loading} onClick={HandleSubmit}>
           {loading ? 'Submitting...' : 'Submit'}
         </button>
+        <div className="map-wrapper">
+          <LocationPicker />
+        </div>
     </div>
   )
 }
