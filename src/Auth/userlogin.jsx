@@ -23,8 +23,6 @@ const userlogin = () => {
     setLoading(true);
    try {
     const token = localStorage.getItem('token');
-    console.log('All localStorage:', {...localStorage});
-    console.log('All sessionStorage:', {...sessionStorage});
        if (!token) {
       throw new Error('User is not authenticated');
     }

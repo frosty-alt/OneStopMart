@@ -1,8 +1,8 @@
 import Bakery from '../Navbaritems/Bakery'
 import Deals from '../Navbaritems/Deals'
-import Local_Farms from './Navbaritems/Local_Farms'
-import organic from './Navbaritems/organic'
-import Groceries from './Navbaritems/Groceries'
+import Local_Farms from '../Home/Navbaritems/Local_Farms'
+import organic from '../Home/Navbaritems/organic'
+import Groceries from '../Home/Navbaritems/Groceries'
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
  const NavBarRoutes = createBrowserRouter([
   {

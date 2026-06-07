@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
-import './map.css'
+//import './map.css'
 const LocationMarker = ({ setPosition }) => {
   const [position, setMarkerPosition] = useState(null);
 

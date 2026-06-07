@@ -4,16 +4,14 @@ import { useLocation } from 'react-router-dom'
 import loyaltybadge from '../../assets/loyaltybadge.svg'
 const IntroContainer = () => {
   const location = useLocation ()
-   console.log('Location object:', location); // Check full location
-  console.log('Location state:', location.state); // Check state
-  console.log('Name value:', location.state?.name); // Check name
+
   
   const name = location.state?.name || 'Guest';
   return (
     <div className="IntroContainer">
         <div className="greeting">
-        <h3>Welcome Back, {name} </h3>
-        <p>Your fresh harvest from Pokhara Valley is ready for tracking.</p>
+        <p className="greeting-text">Welcome Back, {name} </p>
+        <p className="text-content">Your fresh harvest from Pokhara Valley is ready for tracking.</p>
         </div>
         <div className="OSMStars"> 
             <div className="text-content">
