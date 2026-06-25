@@ -1,13 +1,15 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-import LocationPicker from '../component/map';
+import './userlogin.css'
+import Marker from '../components/Marker';
+const [expanded, setExpanded] = useState(false);
 const userlogin = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
     const [name, setName] = useState('')
-    
+
 
     const HandleSubmit = async () => {
         if (!name.trim()) {
@@ -53,20 +55,46 @@ finally{
   setLoading(false);
 }
 }
-  
-  return (
-    <div className="userlogin">
-        <h3>User Login</h3>
-        <p>This is the user login page.</p>
-        <input type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
-        <button disabled={loading} onClick={HandleSubmit}>
-          {loading ? 'Submitting...' : 'Submit'}
-        </button>
-        <div className="map-wrapper">
-          <LocationPicker />
-        </div>
+return (
+  <div className="userlogin-container">
+    <div className="userlogin-card">
+      <h2>Complete Your Profile</h2>
+
+      <div className="form-group">
+        <label>Your Name</label>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+
+      {error && <p className="error">{error}</p>}
+
+      <div className="form-group">
+        <label>Select Your Location</label>
+
+
+
+
+            <div className={`map-wrapper ${expanded ? "expanded" : ""}`}>
+              <button
+            className="map-toggle"
+          onClick={() => setExpanded(!expanded)} >
+           {expanded ? "Close Map" : "Expand Map"}
+           </button>
+
+                   <Marker />
+                      </div>
+
+      <button disabled={loading} onClick={HandleSubmit}>
+        {loading ? "Submitting..." : "Continue"}
+      </button>
     </div>
-  )
+  </div>
+  </div>
+);
 }
 
 export default userlogin

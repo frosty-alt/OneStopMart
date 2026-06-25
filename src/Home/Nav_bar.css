@@ -15,10 +15,11 @@ html, body, #root {
 
 /* ── Navbar Shell ── */
 .navbar {
-  display: flex;
+
   width: 100%;
   background: #ffffff;
   border-bottom: 2px solid #e8f5e0;
+
 }
 
 /* ── Inner Container ── */

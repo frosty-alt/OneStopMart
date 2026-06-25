@@ -1,14 +1,12 @@
 import React from 'react'
 import Nav_bar from './Nav_bar'
-import Dashboard from './Dashboard/Dashboard'
-import RenderHero from './Hero-section/RenderHero'
 
+import RenderHero from './Hero-section/RenderHero'
 const Home = () => {
   return (
-    <div className='Home'>
-    <Nav_bar/>
-    <Dashboard />
-    <RenderHero />
+    <div className="flex flex-col gap-4">
+      <Nav_bar />
+      <RenderHero />
     </div>
   )
 }

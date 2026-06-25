@@ -1,4 +1,4 @@
-import Button from '../component/Button'
+import Button from '../components/Button'
 import './login.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';

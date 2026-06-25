@@ -1,7 +1,7 @@
 import './otp.css';
 import { useState, useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Button from '../component/Button';
+import Button from '../components/Button';
 import mailIcon from '../assets/mail.svg';
 const OtpVerify = () => {
   const { state } = useLocation();
