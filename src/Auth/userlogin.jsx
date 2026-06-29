@@ -3,12 +3,13 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './userlogin.css'
 import Marker from '../components/Marker';
-const [expanded, setExpanded] = useState(false);
+
 const userlogin = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
     const [name, setName] = useState('')
+    const [expanded, setExpanded] = useState(false);
 
 
     const HandleSubmit = async () => {
