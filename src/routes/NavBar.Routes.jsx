@@ -4,6 +4,7 @@ import Local_Farms from '../Home/Navbaritems/Local_Farms'
 import organic from '../Home/Navbaritems/organic'
 import Groceries from '../Home/Navbaritems/Groceries'
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { router } from './Auth.routes'
  const NavBarRoutes = createBrowserRouter([
   {
     path: "/bakery",
@@ -25,4 +26,8 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router
     path: "/groceries",
     element: <Groceries />
   }
-]);
+]);const NavBarRoutes = () => {
+  return <RouterProvider router={router} />
+}
+
+export default NavBarRoutes;

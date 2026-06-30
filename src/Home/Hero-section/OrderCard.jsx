@@ -1,25 +1,38 @@
-import React from 'react'
+import React from "react";
+import Maps from "../../assets/Maps.svg";
 
-const ProfileCard = () => {
+const OrderCard = () => {
   return (
-    <div className="p-5 bg-white rounded-2xl flex-1 w-full h-86.25 flex flex-col items-center gap-2.5">
-      
-      <small className="font-[Inter] text-base">
-        Current Delivery
-      </small>
+   <div className="bg-white rounded-2xl w-full px-10 py-8 flex flex-col gap-8">
 
-      <h2 className="font-[Inter] text-base">
-        ORDER-ID
-      </h2>
+      {/* Top Row */}
+      <div className="flex justify-between items-center w-full pb-6 px-4">
+        <small className="font-[Inter] text-base font-medium">
+          Current Delivery
+        </small>
 
-      <p>#EF-98234-PKH</p>
+       <small style={{paddingLeft: '40px', paddingRight: '40px', paddingTop: '16px', paddingBottom: '16px'}} className="bg-[#00873A] text-white rounded-full font-[Inter] text-sm font-medium">
+  IN TRANSIT
+</small>
+      </div>
 
-      <p>
-        Status: <span className="text-green-600">On the way</span>
-      </p>
+    <div className="flex justify-between items-start w-full pt-6 px-4 gap-6">
+      <div className="flex flex-col gap-5">
+        <h2 className="font-[Inter] text-base font-semibold">
+          ORDER-ID
+        </h2>
+
+        <p>#EF-98234-PKH</p>
+
+        <p>
+          Status: <span className="text-green-600">On the way</span>
+        </p>
+      </div>
+      <img src={Maps} alt="Map" className="w-1/2 h-auto mt-5 rounded-lg shrink-0" />
+    </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default ProfileCard
+export default OrderCard;

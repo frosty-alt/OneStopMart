@@ -2,21 +2,14 @@ import React from 'react'
 
 const ProfileCard = () => {
   return (
-    <div className="p-5 bg-white rounded-2xl flex-1 w-full flex flex-col items-center gap-2.5">
+    <div className="p-5 bg-white rounded-2xl w-full h-full flex flex-col items-center gap-2.5">
       
       <small className="font-[Inter] text-base">
-        Current Delivery
+  Quick Profile
       </small>
+      <button className="appearance-none bg-transparent border-0 p-0 m-0 text-inherit font-inherit cursor-pointer">Edit</button>
 
-      <h2 className="font-[Inter] text-base">
-        ORDER-ID
-      </h2>
-
-      <p>#EF-98234-PKH</p>
-
-      <p>
-        Status: <span className="text-green-600">On the way</span>
-      </p>
+      
 
     </div>
   )

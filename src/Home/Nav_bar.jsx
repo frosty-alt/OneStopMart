@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { FaShoppingCart, FaUser, FaMapMarkerAlt, FaSearch } from 'react-icons/fa';
+import { FaUser, FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Nav_bar.css';
-
+import { IoCartOutline,IoLocationOutline } from "react-icons/io5";
 const placeholders = [
   'Search for Apples...',
   'Search for Milk...',
@@ -43,11 +43,12 @@ const Nav_bar = () => {
 
         {/* Nav Links */}
         <div className="navitems">
+           <Link to="/groceries">Groceries</Link>
+             <Link to="/organic">Organic</Link>
           <Link to="/bakery">Bakery</Link>
-          <Link to="/deals">Deals</Link>
           <Link to="/local-farms">Local Farms</Link>
-          <Link to="/organic">Organic</Link>
-          <Link to="/groceries">Groceries</Link>
+          <Link to="/deals">Deals</Link>
+   
         </div>
 
         {/* Search */}
@@ -66,20 +67,20 @@ const Nav_bar = () => {
 
         {/* Location */}
         <div className="nav-location">
-          <FaMapMarkerAlt />
+     <IoLocationOutline  size={20}/>
           <span>Kathmandu, Nepal</span>
         </div>
 
         {/* Icons */}
         <div className="nav-icons">
           <Link to="/cart" className="nav-icon-btn cart">
-            <FaShoppingCart />
-            <span>Cart</span>
+       <IoCartOutline color='green' size='30px'/>
+    
             <span className="cart-count">3</span>
           </Link>
           <Link to="/profile" className="nav-icon-btn">
-            <FaUser />
-            <span>Profile</span>
+            <FaUser color='green' size={25}/>
+         
           </Link>
         </div>
 

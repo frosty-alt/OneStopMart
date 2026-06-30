@@ -4,7 +4,7 @@ import Nav_bar from './Nav_bar'
 import RenderHero from './Hero-section/RenderHero'
 const Home = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="bg-[#FCF9F8] flex flex-col gap-4">
       <Nav_bar />
       <RenderHero />
     </div>

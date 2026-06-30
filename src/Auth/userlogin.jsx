@@ -2,15 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './userlogin.css'
-import Marker from '../components/Marker';
+
 
 const userlogin = () => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
     const [name, setName] = useState('')
-    const [expanded, setExpanded] = useState(false);
-
+      const [expanded, setExpanded] = useState(false);
 
     const HandleSubmit = async () => {
         if (!name.trim()) {
@@ -86,7 +85,7 @@ return (
            {expanded ? "Close Map" : "Expand Map"}
            </button>
 
-                   <Marker />
+                  
                       </div>
 
       <button disabled={loading} onClick={HandleSubmit}>

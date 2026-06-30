@@ -7,7 +7,7 @@ const IntroContainer = () => {
   const name = location.state?.name || 'Guest'
 
   return (
-    <div className="flex justify-between items-start p-5 mt-8">
+    <div className=" flex justify-between items-start p-5 mt-8 ">
 
       {/* Left - greeting */}
       <div className="flex flex-col p-5 m-0">

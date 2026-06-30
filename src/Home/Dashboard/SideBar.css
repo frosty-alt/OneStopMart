@@ -9,7 +9,14 @@
     
 
 }
-
+.icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    fill : none;
+   font-size : 20px;
+     
+}
 .sidebar h2 {
     font-size: 16px;
     font-weight: 700;

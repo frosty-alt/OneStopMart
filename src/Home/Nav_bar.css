@@ -14,12 +14,12 @@ html, body, #root {
 }
 
 /* ── Navbar Shell ── */
+
 .navbar {
-
   width: 100%;
-  background: #ffffff;
-  border-bottom: 2px solid #e8f5e0;
-
+  background: #FCF9F8;
+  border: 1px solid #BDCABA1A;
+  backdrop-filter: blur(24px);
 }
 
 /* ── Inner Container ── */
@@ -54,9 +54,10 @@ html, body, #root {
 .nav-brand span {
   font-size: 23px;
   font-weight: 700;
-  color: #1a5c00;
+  color: #006B2C;
   letter-spacing: -0.2px;
   white-space: nowrap;
+
 }
 
 /* ── Nav Links ── */
@@ -183,26 +184,19 @@ html, body, #root {
   transition: all 0.15s;
 }
 
-.nav-icon-btn:hover {
+/*.nav-icon-btn:hover {
   background: #f0f9e8;
   color: #1a5c00;
   border-color: #c8e6b0;
-}
+}*/
 
 .nav-icon-btn:active {
   transform: scale(0.96);
 }
 
-.nav-icon-btn.cart {
-  background: #2d8c00;
-  color: #ffffff;
-  border-color: #2d8c00;
-}
 
-.nav-icon-btn.cart:hover {
-  background: #1a5c00;
-  border-color: #1a5c00;
-}
+
+
 
 .cart-count {
   background: #ffffff;
